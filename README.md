@@ -1,2 +1,2 @@
 # EvolveClub
-This  is  Website  of the c;lub
+This  is  Website  of the club
