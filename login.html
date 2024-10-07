@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="home .css">
+</head>
+<body>
+    <div class="logo-left">
+        <img src="EVOLVE LOGO.png" alt="Evolve Club Logo">
+    </div>
+    <div class="logo-right">
+        <img src="GECCS LOGO.png" alt="GECCS Logo">
+    </div>
+    <h1>Evolve Club<br>Government College Of Engineering<br>Chhatrapati Sambhajinagar</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">index</a></li>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="Administraction.html">Administration</a></li>
+            <li><a href="Activity.html">Activity</a></li>
+            <li><a href="Club member.html">Club Member</a></li>
+            <li><a href="Gallary.html">Gallery</a></li>
+            <li><a href="Student corner.html">Student Corner</a></li>
+            <li><a href="login.html">Login/SignUp</a></li>
+            <li><a href="Registaction.html">Registration</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <style>
+         {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            margin: 100px 500px;
+            
+        }
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input[type=text], input[type=password], input[type=email] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type=submit] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+        .toggle-btn {
+            background-color: #f1f1f1;
+            border: none;
+            color: #333;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .toggle-btn:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 id="form-title">Login</h2>
+    <form id="login-form">
+        <input type="text" id="login-username" name="username" placeholder="Username" required>
+        <input type="password" id="login-password" name="password" placeholder="Password" required>
+        <input type="submit" value="Login">
+    </form>
+    <form id="signup-form" style="display: none;">
+        <input type="text" id="signup-username" name="username" placeholder="Username" required>
+        <input type="email" id="signup-email" name="email" placeholder="Email" required>
+        <input type="password" id="signup-password" name="password" placeholder="Password" required>
+        <input type="password" id="signup-password-confirm" name="password-confirm" placeholder="Confirm Password" required>
+        <input type="submit" value="Sign Up">
+    </form>
+    <button class="toggle-btn" onclick="toggleForm()">Don't have an account? Sign Up</button>
+</div>
+
+<script>
+    function toggleForm() {
+        const loginForm = document.getElementById('login-form');
+        const signupForm = document.getElementById('signup-form');
+        const formTitle = document.getElementById('form-title');
+        const toggleBtn = document.querySelector('.toggle-btn');
+
+        if (loginForm.style.display === 'none') {
+            loginForm.style.display = 'block';
+            signupForm.style.display = 'none';
+            formTitle.textContent = 'Login';
+            toggleBtn.textContent = "Don't have an account? Sign Up";
+        } else {
+            loginForm.style.display = 'none';
+            signupForm.style.display = 'block';
+            formTitle.textContent = 'Sign Up';
+            toggleBtn.textContent = 'Already have an account? Login';
+        }
+    }
+</script>
+
+</body>
+</html>
